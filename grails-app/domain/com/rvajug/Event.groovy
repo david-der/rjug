@@ -6,7 +6,6 @@ class Event {
     Sponsor sponsor
     Speaker speaker
     Topic topic
-    Image image
     String description
 
     static constraints = {

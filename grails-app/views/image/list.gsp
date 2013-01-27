@@ -25,8 +25,8 @@
 					<tr>
 					
 						<g:sortableColumn property="name" title="${message(code: 'image.name.label', default: 'Name')}" />
-					
-						<g:sortableColumn property="file" title="${message(code: 'image.file.label', default: 'File')}" />
+
+                        <th>Image</th>
 					
 					</tr>
 				</thead>
@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${imageInstance.id}">${fieldValue(bean: imageInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: imageInstance, field: "file")}</td>
+						<td><img src="${createLink(controller:'image', action:'file', id: imageInstance.id)}" height="50px;"/></td>
 					
 					</tr>
 				</g:each>

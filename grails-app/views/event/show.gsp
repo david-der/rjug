@@ -41,15 +41,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${eventInstance?.image}">
-				<li class="fieldcontain">
-					<span id="image-label" class="property-label"><g:message code="event.image.label" default="Image" /></span>
-					
-						<span class="property-value" aria-labelledby="image-label"><g:link controller="image" action="show" id="${eventInstance?.image?.id}">${eventInstance?.image?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${eventInstance?.speaker}">
 				<li class="fieldcontain">
 					<span id="speaker-label" class="property-label"><g:message code="event.speaker.label" default="Speaker" /></span>

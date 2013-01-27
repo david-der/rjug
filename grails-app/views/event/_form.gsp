@@ -18,14 +18,6 @@
 	<g:datePicker name="eventDate" precision="day"  value="${eventInstance?.eventDate}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'image', 'error')} required">
-	<label for="image">
-		<g:message code="event.image.label" default="Image" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="image" name="image.id" from="${com.rvajug.Image.list()}" optionKey="id" required="" value="${eventInstance?.image?.id}" class="many-to-one"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: eventInstance, field: 'speaker', 'error')} required">
 	<label for="speaker">
 		<g:message code="event.speaker.label" default="Speaker" />

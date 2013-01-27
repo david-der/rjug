@@ -12,6 +12,6 @@ class Sponsor {
     }
 
     public String toString() {
-        company.toString() + ": " + contact.toString()
+        company.toString()
     }
 }

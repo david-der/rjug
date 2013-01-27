@@ -18,7 +18,7 @@ class SponsorController {
             order("id", "asc")
         }
 
-        render results          as JSON
+        return results
     }
 
     def list(Integer max) {
