@@ -2,6 +2,14 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: sponsorInstance, field: 'sponsorLevel', 'error')} ">
+	<label for="sponsorLevel">
+		<g:message code="sponsor.sponsorLevel.label" default="Sponsor Level" />
+		
+	</label>
+	<g:select name="sponsorLevel" from="${com.rvajug.SponsorLevel?.values()}" keys="${com.rvajug.SponsorLevel.values()*.name()}" value="${sponsorInstance?.sponsorLevel?.name()}" noSelection="['': '']"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: sponsorInstance, field: 'company', 'error')} required">
 	<label for="company">
 		<g:message code="sponsor.company.label" default="Company" />

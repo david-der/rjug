@@ -5,15 +5,16 @@
 		<title>Richmond Java Users Group</title>
 	</head>
 	<body>
+        <div class="article-text">
         <a href="admin">Admin</a>
 		<h1>Events for ${java.util.Calendar.getInstance().get(Calendar.YEAR)}</h1>
         <table>
             <thead>
-                <td>Date</td>
-                <td>Topic</td>
-                <td>Speaker</td>
-                <td>Sponsor</td>
-                <td>Location</td>
+                <th>Date</th>
+                <th>Topic</th>
+                <th>Speaker</th>
+                <th>Sponsor</th>
+                <th>Location</th>
             </thead>
             <tr>
                 <td>January 16</td>
@@ -23,5 +24,6 @@
                 <td>University of Richmond</td>
             </tr>
         </table>
+        </div>
 	</body>
 </html>

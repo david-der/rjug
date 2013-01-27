@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list sponsor">
 			
+				<g:if test="${sponsorInstance?.sponsorLevel}">
+				<li class="fieldcontain">
+					<span id="sponsorLevel-label" class="property-label"><g:message code="sponsor.sponsorLevel.label" default="Sponsor Level" /></span>
+					
+						<span class="property-value" aria-labelledby="sponsorLevel-label"><g:fieldValue bean="${sponsorInstance}" field="sponsorLevel"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${sponsorInstance?.company}">
 				<li class="fieldcontain">
 					<span id="company-label" class="property-label"><g:message code="sponsor.company.label" default="Company" /></span>

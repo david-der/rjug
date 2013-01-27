@@ -1,6 +1,7 @@
 package com.rvajug
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.JSON
 
 class SponsorController {
 
@@ -8,6 +9,16 @@ class SponsorController {
 
     def index() {
         redirect(action: "list", params: params)
+    }
+
+    def getGoldSponsors() {
+        def c = Sponsor.createCriteria()
+        def results = c {
+            eq("sponsorLevel", SponsorLevel.GOLD_LEVEL)
+            order("id", "asc")
+        }
+
+        render results          as JSON
     }
 
     def list(Integer max) {

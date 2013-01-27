@@ -23,8 +23,9 @@
 			<table>
 				<thead>
 					<tr>
+					    <th><g:message code="sponsor.company.label" default="Company" /></th>
 					
-						<th><g:message code="sponsor.company.label" default="Company" /></th>
+						<th><g:message code="sponsor.sponsorLevel.label" default="Sponsor Level" /></th>
 					
 						<th><g:message code="sponsor.contact.label" default="Contact" /></th>
 					
@@ -35,6 +36,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${sponsorInstance.id}">${fieldValue(bean: sponsorInstance, field: "company")}</g:link></td>
+					
+						<td>${fieldValue(bean: sponsorInstance, field: "sponsorLevel")}</td>
 					
 						<td>${fieldValue(bean: sponsorInstance, field: "contact")}</td>
 					
